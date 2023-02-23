@@ -1,0 +1,16 @@
+.vscode/
+
+__pycache__/
+__pypackages__/
+
+build/
+dist/
+results/
+
+*.egg-info/
+*.png
+*.txt
+*.xml
+
+.coverage
+.pdm.toml
