@@ -1,6 +1,7 @@
 import numpy as np
+from pathlib import Path
 import plotly.graph_objects as go
-from spm.data import f_U_ocp, f_U_ocp_ext, y_s_max
+from papers.spm.data import f_U_ocp, f_U_ocp_ext, y_s_max
 
 x_min = 0.18
 x_max = 1.0
@@ -69,4 +70,5 @@ fig.update_yaxes(
 )
 
 # fig.show()
-fig.write_image("pt_Uocp_y.png", scale=2)  # width=600, height=350,
+imageFile = Path.cwd() / "papers" / "spm" / "results" / "pt_Uocp_y.png"
+fig.write_image(imageFile, scale=2)  # width=600, height=350,

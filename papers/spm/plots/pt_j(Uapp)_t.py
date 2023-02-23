@@ -3,9 +3,9 @@ import polars as pl
 import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from spm.data import t_charge, t_hold, f_U_ocp_ext, c_0
+from papers.spm.data import t_charge, t_hold, f_U_ocp_ext, c_0
 
-storageFile = Path.cwd() / "paper_spm" / "results" / "sol_stiff.json"
+storageFile = Path.cwd() / "papers" / "spm" / "results" / "sol_stiff.json"
 print(storageFile)
 df = pl.read_json(storageFile)
 
@@ -99,4 +99,5 @@ fig.update_yaxes(
 )
 
 # fig.show()
-fig.write_image("pt_j(Uapp)_t.png", scale=2)  # width=600, height=350,
+imageFile = Path.cwd() / "papers" / "spm" / "results" / "pt_j(Uapp)_t.png"
+fig.write_image(imageFile, scale=2)  # width=600, height=350,

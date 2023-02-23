@@ -2,9 +2,9 @@ from pathlib import Path
 import polars as pl
 import numpy as np
 import plotly.graph_objects as go
-from spm.data import U_start, U_max
+from papers.spm.data import U_start, U_max
 
-storageFile = Path.cwd() / "paper_spm" / "results" / "sol_stiff.json"
+storageFile = Path.cwd() / "papers" / "spm" / "results" / "sol_stiff.json"
 print(storageFile)
 df = pl.read_json(storageFile)
 print(df)
@@ -60,4 +60,5 @@ fig.update_yaxes(
 )
 
 # fig.show()
-fig.write_image("pt_j_Uapp.png", scale=2)  # width=600, height=350,
+imageFile = Path.cwd() / "papers" / "spm" / "results" / "pt_j_Uapp.png"
+fig.write_image(imageFile, scale=2)  # width=600, height=350,

@@ -60,6 +60,6 @@ df = pl.DataFrame(
 )
 print(df)
 
-storageFile = Path.cwd() / "paper_spm" / "results" / "sol_stiff.json"
+storageFile = Path.cwd() / "paper" / "spm" / "results" / "sol_stiff.json"
 print(storageFile.absolute())
 df.write_json(storageFile)

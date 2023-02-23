@@ -1,6 +1,7 @@
 import numpy as np
+from pathlib import Path
 import plotly.graph_objects as go
-from spm.data import f_jy_η
+from papers.spm.data import f_jy_η
 
 x_min = 0.8
 x_max = 1.0
@@ -54,4 +55,5 @@ fig.update_yaxes(
 )
 
 # fig.show()
-fig.write_image("pt_j(eta)_y.png", scale=2)  # width=600, height=350,
+imageFile = Path.cwd() / "papers" / "spm" / "results" / "pt_j(eta)_y.png"
+fig.write_image(imageFile, scale=2)  # width=600, height=350,
