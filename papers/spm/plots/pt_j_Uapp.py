@@ -13,15 +13,15 @@ U_app = df.get_column("U_app").view()
 j = df.get_column("j").view()
 
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=U_app, y=j, mode="lines", name="U_app"))
+fig.add_trace(go.Scatter(x=U_app, y=j, mode="lines", name=r"$U_{app}$"))
 fig.update_layout(
-    xaxis_title="U_app [V]",
-    yaxis_title="j [ ]",
+    xaxis_title=r"$U_{app} \left[ V \right]$",
+    yaxis_title=r"$j \left[ \; \right]$",
     template="none",
     autosize=False,
     width=500,
     height=400,
-    margin=dict(l=40, r=10, t=10, b=40, pad=3),
+    margin=dict(l=40, r=10, t=5, b=40, pad=3),
 )
 
 

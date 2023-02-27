@@ -5,7 +5,7 @@ from papers.spm.data import f_U_ocp, f_U_ocp_ext, y_s_max
 
 x_min = 0.18
 x_max = 1.0
-x_break = y_s_max
+x_break = y_s_max - 0.006360215613507735
 y_old = np.linspace(x_min, x_break, 1000)
 Uocp_old = np.zeros(len(y_old))
 for i in range(len(y_old)):
@@ -17,25 +17,25 @@ for i in range(len(y_ext)):
     Uocp_ext[i] = f_U_ocp_ext(y_ext[i])
 
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=y_old, y=Uocp_old, mode="lines", name="Uocp"))
+fig.add_trace(go.Scatter(x=y_old, y=Uocp_old, mode="lines", name=r"$U_{ocp}$"))
 fig.add_trace(
     go.Scatter(
         x=y_ext,
         y=Uocp_ext,
         # mode='lines',
         mode="lines",
-        name="Uext",
+        name=r"$U_{ext}$",
     )
 )
 
 fig.update_layout(
-    xaxis_title="y [ ]",
-    yaxis_title="Uocp [ ]",
+    xaxis_title=r"$y \left[ \; \right]$",
+    yaxis_title=r"$U_{ocp} \left[ \; \right]$",
     template="none",
     autosize=False,
     width=500,
-    height=400,
-    margin=dict(l=50, r=10, t=10, b=40, pad=3),
+    height=300,
+    margin=dict(l=50, r=80, t=5, b=40, pad=3),
 )
 
 

@@ -6,21 +6,28 @@ from papers.spm.data import f_jy_η
 x_min = 0.8
 x_max = 1.0
 y = np.linspace(x_min, x_max, 100)
-etas = [0.1, 0.15, 0.2]
+etas = [-0.2, -0.15, -0.1, 0.1, 0.15, 0.2]
 
 fig = go.Figure()
 for eta in etas:
     j = f_jy_η(y, eta)
-    fig.add_trace(go.Scatter(x=y, y=j, mode="lines", name=f"j(η={eta})"))
+    fig.add_trace(
+        go.Scatter(
+            x=y,
+            y=j,
+            mode="lines",
+            name=r"$\eta=" + str(eta) + "$",  #  \left(\eta={eta}\right)
+        )
+    )
 
 fig.update_layout(
-    xaxis_title="y [ ]",
-    yaxis_title="j [ ]",
+    xaxis_title=r"$y \left[ \; \right]$",
+    yaxis_title=r"$j \left[ \; \right]$",
     template="none",
-    autosize=False,
+    # autosize=False,
     width=500,
     height=400,
-    margin=dict(l=40, r=0, t=10, b=40, pad=3),
+    margin=dict(l=40, r=120, t=5, b=40, pad=3),
 )
 
 

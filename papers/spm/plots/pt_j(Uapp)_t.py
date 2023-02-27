@@ -29,7 +29,7 @@ fig.add_trace(
         x=ts,
         y=Uapp,
         mode="lines",
-        name="Uapp(t)",
+        name=r"$U_{ocp}(t)$",
     ),
     secondary_y=True,
 )
@@ -38,12 +38,12 @@ fig.add_trace(
         x=ts,
         y=Uocp,
         mode="lines",
-        name="Uocp(t)",
+        name=r"$U_{ocp}(t)$",
     ),
     secondary_y=True,
 )
 fig.add_trace(
-    go.Scatter(x=ts, y=j, mode="lines", name="j(t)"),
+    go.Scatter(x=ts, y=j, mode="lines", name=r"$j(t)$"),
     secondary_y=False,
 )
 
@@ -53,7 +53,7 @@ fig.update_layout(
     autosize=False,
     width=500,
     height=400,
-    margin=dict(l=40, r=5, t=10, b=40, pad=1),
+    margin=dict(l=40, r=90, t=10, b=40, pad=1),
 )
 
 
@@ -61,7 +61,7 @@ dx = x_max - x_min
 
 # https://plotly.com/python/axes/
 fig.update_xaxes(
-    title_text="t [s]",
+    title_text=r"$t \left[s\right]$",
     ticklabelstep=1,
     nticks=10,
     range=[x_min - dx * 0.02, x_max + dx * 0.02],
@@ -78,7 +78,7 @@ dy = y_max - y_min
 
 fig.update_yaxes(
     secondary_y=False,
-    title_text="j [ ]",
+    title_text=r"$j \left[ \; \right]$",
     range=[y_min, y_max],
     showline=True,
     linewidth=2,
@@ -89,7 +89,7 @@ fig.update_yaxes(
 
 fig.update_yaxes(
     secondary_y=True,
-    title_text="U [V]",
+    title_text=r"$U \left[V\right]$",
     range=[4, 4.4],
     showline=True,
     linewidth=2,
