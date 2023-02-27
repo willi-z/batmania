@@ -36,7 +36,7 @@ const = dict(
 
 y_s_max = 0.998432
 
-cs = c_0 * (1 - 1e-4)  # * (1-4001e-6)
+cs = c_0 * (1 - 1e-4)  # * 0.99601657841396 # (1 - 1e-4)  # * (1-4001e-6)
 print(f"y_s: {cs/c_0}")
 
 
@@ -54,9 +54,7 @@ def f_U_ocp(y_s):
     )
 
 
-def f_U_ocp_ext(y_s):
-    dy = 22e-4
-
+def f_U_ocp_ext(y_s, dy=0.006360215613507735):  # 22e-4
     if y_s >= y_s_max - dy:
         c = y_s_max - dy
         h = 1e-6
