@@ -2,7 +2,7 @@
 
 [project]
 name = "research"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = [
     {name = "Willi Zschiebsch", email = "willi.zschiebsch@gmail.com"},
