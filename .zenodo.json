@@ -1,0 +1,12 @@
+{
+    "title": "BatMania",
+    "license": "MIT",
+    "upload_type": "software",
+    "creators": [
+        {
+            "affiliation": "HTWK Leipzig",
+            "name": "Willi Zschiebsch"
+        }
+    ],
+    "access_right": "open"
+}
