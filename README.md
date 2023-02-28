@@ -1,5 +1,9 @@
 # BatMania - The Battery Modeling Collection in Python
 
+[![DOI](https://zenodo.org/badge/605480587.svg)](https://zenodo.org/badge/latestdoi/605480587)
+
+---
+
 This repo collects battery models from different publications, implements them in Python.
 Further details are explained and if changes with regard to the source material are made they will be explained.
 
@@ -15,13 +19,31 @@ Each implemented publication contains the following elements:
     - ``pt_XXX.py`` are static plots made with ``plotly``
     - ``ipt`` are interactive plots made with `dash``
 
-# Overview
+## Overview
 If you look for specific models use this overview:
 - Single Particle Model
     - books/bms1/micro
     - papers/spm
     - papers/spme (upcoming)
 - Doyler-Fuller-Newman or Pseudo-2D-Model (upcoming)
+
+## Citing
+
+If you use ``BatMania`` for research and would like to cite the module
+and source, you can visit [BatMania Zenodo](https://zenodo.org/badge/latestdoi/7684688) and generate the correct citation.  
+For example, the BibTex citation is:
+```bibtex
+@software{BatMania2023,
+  author       = {Willi Zschiebsch},
+  title        = {BatMania},
+  month        = feb,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {v0.1.0},
+  doi          = {10.5281/zenodo.7684688},
+  url          = {https://doi.org/10.5281/zenodo.7684688}
+}
+```
 
 ## Contribution
 
