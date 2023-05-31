@@ -5,12 +5,15 @@ __pypackages__/
 
 build/
 dist/
+plots/
 results/
+sol_*
 
 *.egg-info/
 *.png
 *.txt
 *.xml
+
 
 .coverage
 .pdm.toml
